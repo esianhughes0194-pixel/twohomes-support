@@ -66,30 +66,75 @@
 
   <h2>Account &amp; data deletion</h2>
   <div class="card">
-    <p>To delete your account or your family's data, you can use the delete button which can be found in settings, located in the top right of your dashboard.</p>
+    <p><strong>Delete your account in the app.</strong> Open Settings (the gear icon at the top right of your
+    Dashboard) and tap <em>Delete account</em>. This removes your account and your personal profile.</p>
+    <p><strong>Shared family records.</strong> Messages, schedule, expenses and photos are shared between you
+    and your co-parent, so they stay available to your co-parent when you delete your own account. To have a
+    family's shared records deleted, or to have a child's account deleted, email
+    <a href="mailto:esianhughes0194@gmail.com">esianhughes0194@gmail.com</a> and we'll do it.</p>
   </div>
 
   <h2 id="privacy">Privacy Policy</h2>
-  <p><em>Last updated: September 2026</em></p>
+  <p><em>Last updated: 21 September 2026</em></p>
 
   <div class="card">
     <p><strong>What we collect.</strong> To provide the app, TwoHomes Plus stores: your name and email
     (for your account); your family's custody schedule and calendar events; expense records you log
     (amounts, descriptions, categories, and who they're split between), including receipt photos attached
-    to reimbursement requests; messages you send within the app, including photos shared in messages;
-    information you choose to add about your children (name, birthdate, and — for children with full
-    profiles — doctor's surgery, allergies, medicines, and activities); and your subscription entitlement
-    status. We do not collect location data, and we do not use any analytics, advertising, or tracking
-    SDKs.</p>
+    to reimbursement requests, and any recurring expenses you set up; handover packing lists; travel-abroad
+    consent records (which child is travelling, the destination, dates, flight and accommodation details,
+    an emergency contact, and each parent's consent); messages you send within the app, including photos
+    shared in messages; information you choose to add about your children (name, birthdate, and — for
+    children with full profiles — doctor's surgery, allergies, medicines, and activities); a private
+    journal that only its author can read; your device's push notification token if you turn on
+    notifications; and your subscription entitlement status. If you give someone else access (see below),
+    we store their name and the access you granted, plus their email address if they sign in with one. We
+    do not collect location data, and we do not use any analytics, advertising, or tracking SDKs.</p>
 
-    <p><strong>How it's used.</strong> All of this data is used solely to provide the app's features to
-    you and the co-parent(s) and children linked to your family. We do not sell your data, and we do not
-    share it with third parties for advertising or marketing purposes.</p>
+    <p><strong>How it's used.</strong> This data is used solely to provide the app's features to you and
+    the co-parent(s), children and other people linked to your family. We do not sell your data, and we do
+    not share it with third parties for advertising or marketing purposes. The only third parties that
+    handle it are the service providers described below.</p>
 
-    <p><strong>Where it's stored.</strong> Data is stored using Google Firebase (Cloud Firestore for
-    records, Cloud Storage for photos), which acts as our data processor. Access to your family's data is
-    restricted, at the database level, to the specific accounts linked to that family — no other TwoHomes
-    Plus user can read it.</p>
+    <p><strong>Where it's stored.</strong> Data is stored and processed using Google Firebase (Cloud
+    Firestore for records, Cloud Storage for photos, and Cloud Functions for server-side features), which
+    acts as our data processor. Access to your family's data is restricted, at the database level, to the
+    accounts linked to that family, and each kind of account sees only what it needs (see "Who can see
+    your family's information" below) — no other TwoHomes Plus user can read it. Our providers may process
+    data outside the UK, including in the United States.</p>
+
+    <p><strong>Who can see your family's information.</strong> Parents linked to the family can see
+    everything in it, except that each parent's private journal is visible only to them. A child's account
+    can see the shared custody calendar and their own message thread with their parents (see "Children's
+    accounts"). Family members you invite, such as a grandparent, can see the custody calendar only. If you
+    invite a solicitor, mediator or CAFCASS officer, they get read-only access to the custody schedule,
+    schedule-change requests, and the messages between you and your co-parent — and nothing else: not
+    expenses, children's profiles, health information, travel-consent records or journals. Where two
+    parents are linked, both must approve before a professional's access code works, and either parent can
+    remove their access at any time from Settings.</p>
+
+    <p><strong>Receipt scanning.</strong> If you choose "Scan a receipt" when adding an expense (a
+    TwoHomes Plus subscriber feature), the photo you take is sent, via our server, to Google's Gemini AI
+    service, which reads the shop name, date and total. The app asks for your permission the first time
+    you use it. Only the photo is sent — not your name, email or any family details. We do not store the
+    scan photo on our servers unless you also attach it to a reimbursement request, in which case it is
+    stored like any other receipt photo. We record only a count of scans per family per day, to limit
+    misuse. Google handles the photo under its own terms — see policies.google.com/privacy.</p>
+
+    <p><strong>Notifications.</strong> If you turn on notifications, we store your device's push token so we
+    can alert you to new messages and schedule requests. These notifications are delivered through Apple's
+    push service and Expo's push notification service, which receive your push token and the text of the
+    notification (such as the sender's name and the start of a message). You can turn each type off in
+    Settings.</p>
+
+    <p><strong>Messages.</strong> Messages cannot be edited or deleted once sent, so that co-parents have a
+    reliable record of what was said. They are removed only when a family's data is deleted (see "Account
+    &amp; data deletion" above).</p>
+
+    <p><strong>Exports and court bundles.</strong> When you export a court bundle, message history or expense
+    report, the PDF is created on your device from your family's records and you choose where to share it.
+    TwoHomes Plus does not receive a copy. These exports are records of what you and your co-parent entered
+    and did in the app; we cannot verify that any of it is true, and they are not legal advice.</p>
 
     <p><strong>Subscriptions.</strong> Subscription purchases and renewal status are processed by Apple
     and managed on our behalf by RevenueCat, a subscription infrastructure provider. RevenueCat receives
@@ -100,17 +145,21 @@
 
     <p><strong>Children's accounts.</strong> A child can only get their own TwoHomes Plus account if a
     parent on that family invites them and explicitly confirms they are that child's parent or guardian.
-    A child's account is limited to viewing the shared custody calendar and messaging their parents — it
-    has no access to financial records, health records, or schedule-change requests. A parent can request
-    deletion of their child's account at any time via the support email above.</p>
+    A child can sign in with an email address or, if they don't have one, with a login code and a 4-digit
+    PIN that their parent chooses; the PIN is stored only as a salted, one-way hash, and repeated wrong
+    attempts temporarily lock sign-in. A child's account is limited to viewing the shared custody calendar
+    and messaging their parents — it has no access to financial records, health records, or
+    schedule-change requests. A parent can request deletion of their child's account at any time via the
+    support email above.</p>
 
     <p><strong>Voice calls.</strong> Calls between co-parents connect directly device-to-device (WebRTC);
     TwoHomes Plus does not record or store call audio. A connectivity relay service may be used to help
     establish the connection on some networks, which can see that a call is occurring but not its
     content.</p>
 
-    <p><strong>Your choices.</strong> You can request a copy of your data or full deletion of your account
-    and associated family data at any time by emailing the support address above.</p>
+    <p><strong>Your choices.</strong> You can delete your own account in the app (Settings &rarr; Delete
+    account), and you can request a copy of your data, or deletion of your family's shared records, at any
+    time by emailing the support address above.</p>
 
     <p><strong>Changes to this policy.</strong> If this policy changes, we'll update the date at the top
     of this page.</p>
